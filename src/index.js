@@ -11,10 +11,10 @@ if (localBoard) {
 }
 
 const scoreContainer = document.querySelector('.scoreList');
-const submitButton = document.getElementById('submitButton');
-const refreshButton = document.getElementById('refreshButton');
 const inputName = document.getElementById('inputName');
 const inputScore = document.getElementById('inputScore');
+const refreshButton = document.getElementById('refreshButton');
+const submitButton = document.getElementById('submitButton');
 
 submitButton.addEventListener('click', () => {
   addScore(inputName.value, inputScore.value, leaderboard);
