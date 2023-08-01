@@ -110,13 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/addScore.js":
+/*!*************************!*\
+  !*** ./src/addScore.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addScore)\n/* harmony export */ });\nfunction addScore(personsName, score, leaderboard) {\n  const newScore = {};\n  newScore.name = personsName;\n  newScore.score = score;\n  leaderboard.push(newScore);\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/addScore.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _loadHTML_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadHTML.js */ \"./src/loadHTML.js\");\n/* harmony import */ var _addScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addScore.js */ \"./src/addScore.js\");\n\n\n\n\nlet leaderboard = [];\n\nconst scoreContainer = document.querySelector('.scoreList');\nconst submitButton = document.getElementById('submitButton');\nconst refreshButton = document.getElementById('refreshButton');\nconst inputName = document.getElementById('inputName');\nconst inputScore = document.getElementById('inputScore');\n\nsubmitButton.addEventListener('click', () => {\n  (0,_addScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(inputName.value, inputScore.value, leaderboard);\n  inputName.value = '';\n  inputScore.value = '';\n  // loadHTML(scoreContainer, leaderboard);\n});\n\nrefreshButton.addEventListener('click', () => (0,_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\nwindow.addEventListener('load', () => (0,_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/loadHTML.js":
+/*!*************************!*\
+  !*** ./src/loadHTML.js ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHTML)\n/* harmony export */ });\nfunction loadHTML(scoreContainer, scoreArray) {\n  scoreContainer.innerHTML = '';\n  for (let i = 0; i < scoreArray.length; i += 1) {\n    const scoreElement = document.createElement('li');\n    scoreElement.innerHTML = `${scoreArray[i].name}: ${scoreArray[i].score}`;\n    scoreContainer.appendChild(scoreElement);\n  }\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/loadHTML.js?");
 
 /***/ })
 
