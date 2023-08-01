@@ -6,6 +6,11 @@ module.exports = {
   entry: './src/index.js',
   devServer: {
     static: './dist',
+    port: 3000,
+    hot: true,
+    compress: true,
+    open: true,
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -15,7 +20,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: "http://localhost:8080/main.js",
+    clean: true,
   },
   module: {
     rules: [

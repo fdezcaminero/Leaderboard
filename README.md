@@ -1,5 +1,5 @@
 <div align="center">
-  <h1><b>Leaderboard</b></h1>
+  <h1><b>To-do list</b></h1>
 </div>
 
 # 📗 Table of Contents
@@ -24,9 +24,9 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Leaderboard <a name="about-project"></a>
+# 📖 To-do list <a name="about-project"></a>
 
-**Leaderboard** is a project for Microverse.
+**To-do list** is a promotion for the upcoming game between Honinbo Jowa and Akaboshi Intetsu.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -50,15 +50,9 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 💻 Recorded Introduction to the Project <a name="Video"></a>
-
-- [Video of the Author Introducing the Project](https://www.loom.com/share/2add7b858da64f07b5ea40930d7a95e7)
-
-- [Video of the Author Introducing the Project, Take 2](https://www.loom.com/share/69894470302a490e84ee3990e6d8400e)
-
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo!](https://fdezcaminero.github.io/aGameOfGo/)
+- [Live Demo!](https://fdezcaminero.github.io/to-do-list/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -141,10 +135,6 @@ If you like this project send thanks to Microverse.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-Many thanks to [Cindy Shin](https://www.behance.net/adagio07) for the original design
-
-Special thanks to https://unsplash.com/ and https://www.pexels.com/ (along with their photographers).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

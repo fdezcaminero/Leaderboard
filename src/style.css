@@ -1,3 +1,47 @@
-h1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+li:nth-child(odd) {
+  background-color: #acacac;
+}
+
+.disp-flex1 {
+  display: flex;
+}
+
+.disp-flex2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.flexstuff {
+  display: flex;
+}
+
+.ulStyle {
+  border: 2px solid black;
+}
+
+.disp-flex2 input {
+  width: 156.683px;
+}
+
+.disp-flex2 button {
+  width: 30%;
+}
+
+.mainClass {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.bothButtons {
+  border-radius: 0;
 }
