@@ -4,6 +4,12 @@ import addScore from './addScore.js';
 
 let leaderboard = [];
 
+const localBoard = localStorage.getItem('superboard');
+
+if (localBoard) {
+  leaderboard = JSON.parse(localBoard);
+}
+
 const scoreContainer = document.querySelector('.scoreList');
 const submitButton = document.getElementById('submitButton');
 const refreshButton = document.getElementById('refreshButton');
@@ -14,7 +20,7 @@ submitButton.addEventListener('click', () => {
   addScore(inputName.value, inputScore.value, leaderboard);
   inputName.value = '';
   inputScore.value = '';
-  // loadHTML(scoreContainer, leaderboard);
+  localStorage.setItem('superboard', JSON.stringify(leaderboard));
 });
 
 refreshButton.addEventListener('click', () => loadHTML(scoreContainer, leaderboard));
