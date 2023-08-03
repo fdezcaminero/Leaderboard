@@ -8,6 +8,6 @@ const loadHTML = async (scoreContainer, scoreArray) => {
     scoreElement.innerHTML = `${scoreArray[i].user}: ${scoreArray[i].score}`;
     scoreContainer.appendChild(scoreElement);
   }
-}
+};
 
 export default loadHTML;

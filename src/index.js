@@ -2,7 +2,7 @@ import './style.css';
 import loadHTML from './modules/loadHTML.js';
 import addScore from './modules/addScore.js';
 
-let leaderboard = [];
+const leaderboard = [];
 
 const scoreContainer = document.querySelector('.scoreList');
 const inputName = document.getElementById('inputName');
