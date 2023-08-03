@@ -14,7 +14,5 @@ export default function addScore(personsName, score, leaderboard) {
       "user": personsName,
       "score": score
     }),
-  }).then(res => {
-    return res.json();
-  }).then(data => console.log(data));
+  });
 }
