@@ -110,33 +110,33 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/addScore.js":
-/*!*************************!*\
-  !*** ./src/addScore.js ***!
-  \*************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addScore)\n/* harmony export */ });\nfunction addScore(personsName, score, leaderboard) {\n  const newScore = {};\n  newScore.name = personsName;\n  newScore.score = score;\n  leaderboard.push(newScore);\n  localStorage.setItem('superboard', JSON.stringify(leaderboard));\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/addScore.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _loadHTML_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./loadHTML.js */ \"./src/loadHTML.js\");\n/* harmony import */ var _addScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./addScore.js */ \"./src/addScore.js\");\n\n\n\n\nlet leaderboard = [];\n\nconst localBoard = localStorage.getItem('superboard');\n\nif (localBoard) {\n  leaderboard = JSON.parse(localBoard);\n}\n\nconst scoreContainer = document.querySelector('.scoreList');\nconst inputName = document.getElementById('inputName');\nconst inputScore = document.getElementById('inputScore');\nconst refreshButton = document.getElementById('refreshButton');\nconst submitButton = document.getElementById('submitButton');\n\nsubmitButton.addEventListener('click', () => {\n  (0,_addScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(inputName.value, inputScore.value, leaderboard);\n  inputName.value = '';\n  inputScore.value = '';\n  localStorage.setItem('superboard', JSON.stringify(leaderboard));\n});\n\nrefreshButton.addEventListener('click', () => (0,_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\nwindow.addEventListener('load', () => (0,_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/loadHTML.js */ \"./src/modules/loadHTML.js\");\n/* harmony import */ var _modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/addScore.js */ \"./src/modules/addScore.js\");\n\n\n\n\nlet leaderboard = [];\n\n// fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {\n//   method: 'POST',\n//   headers: {\n//     'Content-Type': 'application/json'\n//   },\n//   body: JSON.stringify({\n//     \"name\": \"Super cool game\"\n//   }),\n// }).then(res => {\n//   return res.json();\n// }).then(data => console.log(data));\n\n// fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {\n//   method: 'POST',\n//   headers: {\n//     'Content-Type': 'application/json'\n//   },\n//   body: JSON.stringify({\n//     \"user\": \"Jose\",\n//     \"score\": 100\n//   }),\n// }).then(res => {\n//   return res.json();\n// }).then(data => console.log(data));\n\n// Object { result: \"Game with ID: ebDdFrSX03ugdnMEXHod added.\" }\n// result: \"Game with ID: sAWYRpOAO9rDXCKasPsP added.\"\n// /games/ebDdFrSX03ugdnMEXHod/scores/\n// https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/\n\nconst gameID = 'ebDdFrSX03ugdnMEXHod';\nconst gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/';\n\nconst localBoard = localStorage.getItem('superboard');\n\nif (localBoard) {\n  leaderboard = JSON.parse(localBoard);\n}\n\nconst scoreContainer = document.querySelector('.scoreList');\nconst inputName = document.getElementById('inputName');\nconst inputScore = document.getElementById('inputScore');\nconst refreshButton = document.getElementById('refreshButton');\nconst submitButton = document.getElementById('submitButton');\n\nsubmitButton.addEventListener('click', () => {\n  (0,_modules_addScore_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(inputName.value, inputScore.value, leaderboard);\n  inputName.value = '';\n  inputScore.value = '';\n  localStorage.setItem('superboard', JSON.stringify(leaderboard));\n});\n\nrefreshButton.addEventListener('click', () => (0,_modules_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\nwindow.addEventListener('load', () => (0,_modules_loadHTML_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(scoreContainer, leaderboard));\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
-/***/ "./src/loadHTML.js":
-/*!*************************!*\
-  !*** ./src/loadHTML.js ***!
-  \*************************/
+/***/ "./src/modules/addScore.js":
+/*!*********************************!*\
+  !*** ./src/modules/addScore.js ***!
+  \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHTML)\n/* harmony export */ });\nfunction loadHTML(scoreContainer, scoreArray) {\n  scoreContainer.innerHTML = '';\n  for (let i = 0; i < scoreArray.length; i += 1) {\n    const scoreElement = document.createElement('li');\n    scoreElement.innerHTML = `${scoreArray[i].name}: ${scoreArray[i].score}`;\n    scoreContainer.appendChild(scoreElement);\n  }\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/loadHTML.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addScore)\n/* harmony export */ });\nfunction addScore(personsName, score, leaderboard) {\n  const newScore = {};\n  newScore.score = score;\n  newScore.name = personsName;\n  leaderboard.push(newScore);\n  localStorage.setItem('superboard', JSON.stringify(leaderboard));\n\n  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      \"user\": personsName,\n      \"score\": score\n    }),\n  }).then(res => {\n    return res.json();\n  }).then(data => console.log(data));\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/addScore.js?");
+
+/***/ }),
+
+/***/ "./src/modules/loadHTML.js":
+/*!*********************************!*\
+  !*** ./src/modules/loadHTML.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadHTML)\n/* harmony export */ });\nasync function loadHTML(scoreContainer, scoreArray) {\n  scoreContainer.innerHTML = '';\n  // scoreArray = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {\n  //   method: 'GET',\n  //   headers: {\n  //     'Content-Type': 'application/json'\n  //   },\n  // }).then(data => console.log(data));\n\n  const getScore = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/');\n  const convertScore = await getScore.json();\n\n  // console.log(convertScore.result);\n  scoreArray = convertScore.result;\n  console.log(scoreArray);\n\n  // scoreArray = convertScore.then(function(value) { return value.result });\n  // console.log(scoreArray);\n\n  for (let i = 0; i < scoreArray.length; i += 1) {\n    const scoreElement = document.createElement('li');\n    scoreElement.innerHTML = `${scoreArray[i].user}: ${scoreArray[i].score}`;\n    scoreContainer.appendChild(scoreElement);\n  }\n  // console.log(scoreArray);\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/loadHTML.js?");
 
 /***/ })
 

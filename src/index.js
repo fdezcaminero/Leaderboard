@@ -1,8 +1,41 @@
 import './style.css';
-import loadHTML from './loadHTML.js';
-import addScore from './addScore.js';
+import loadHTML from './modules/loadHTML.js';
+import addScore from './modules/addScore.js';
 
 let leaderboard = [];
+
+// fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({
+//     "name": "Super cool game"
+//   }),
+// }).then(res => {
+//   return res.json();
+// }).then(data => console.log(data));
+
+// fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({
+//     "user": "Jose",
+//     "score": 100
+//   }),
+// }).then(res => {
+//   return res.json();
+// }).then(data => console.log(data));
+
+// Object { result: "Game with ID: ebDdFrSX03ugdnMEXHod added." }
+// result: "Game with ID: sAWYRpOAO9rDXCKasPsP added."
+// /games/ebDdFrSX03ugdnMEXHod/scores/
+// https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/
+
+const gameID = 'ebDdFrSX03ugdnMEXHod';
+const gameURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/';
 
 const localBoard = localStorage.getItem('superboard');
 
