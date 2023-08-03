@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ addScore)\n/* harmony export */ });\nfunction addScore(personsName, score, leaderboard) {\n  const newScore = {};\n  newScore.score = score;\n  newScore.name = personsName;\n  leaderboard.push(newScore);\n  localStorage.setItem('superboard', JSON.stringify(leaderboard));\n\n  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      \"user\": personsName,\n      \"score\": score\n    }),\n  });\n}\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/addScore.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst addScore = async (personsName, score) => {\n  fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {\n    method: 'POST',\n    headers: {\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({\n      \"user\": personsName,\n      \"score\": score\n    }),\n  });\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addScore);\n\n\n//# sourceURL=webpack://to-do-list/./src/modules/addScore.js?");
 
 /***/ }),
 

@@ -1,10 +1,4 @@
-export default function addScore(personsName, score, leaderboard) {
-  const newScore = {};
-  newScore.score = score;
-  newScore.name = personsName;
-  leaderboard.push(newScore);
-  localStorage.setItem('superboard', JSON.stringify(leaderboard));
-
+const addScore = async (personsName, score) => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ebDdFrSX03ugdnMEXHod/scores/', {
     method: 'POST',
     headers: {
@@ -16,3 +10,5 @@ export default function addScore(personsName, score, leaderboard) {
     }),
   });
 }
+
+export default addScore;
